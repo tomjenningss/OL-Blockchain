@@ -126,4 +126,5 @@ Create a POST request to add to the ledger:
 
 
 <img src="images/built-on-openliberty.png" alt="drawing" width="200" align="right">
+<img src="images/hyperledger_image.png" alt="drawing" width="200" align="left">
 
