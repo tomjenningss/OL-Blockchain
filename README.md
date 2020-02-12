@@ -89,7 +89,7 @@ If you have had any problems with building the network refer to:
 
 ## Start interacting with the Blockchain Network
 
-Head to the `finish` directory in the Blockchain RESTful service
+Head to the `finish` directory in the `Blockchain-restful-service` directory:
 
 `cd ../../blockchain-restful-service/finish/`
 
