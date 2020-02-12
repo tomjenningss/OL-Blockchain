@@ -48,24 +48,10 @@ public class QueryCar {
 			Network network = gateway.getNetwork("mychannel");
 			Contract contract = network.getContract("fabcar");
 
-			
-			
-			//result = contract.evaluateTransaction("queryAllCars");
-			//System.out.println(new String(result));
-			
 			result = contract.evaluateTransaction("queryCar", Key);
 			System.out.println(new String(result));
 			outputString = new String(result);
 
-			//contract.submitTransaction("createCar", "CAR10", "VW", "Polo", "Grey", "Mary");
-
-			//result = contract.evaluateTransaction("queryCar", "CAR10000000");
-			//System.out.println(new String(result));
-
-			//contract.submitTransaction("changeCarOwner", "CAR10", "Archie");
-
-			//result = contract.evaluateTransaction("queryCar", "CAR10");
-			//System.out.println(new String(result));
 			}
 		}
 		catch (Exception e){
@@ -80,6 +66,10 @@ public class QueryCar {
 	@javax.ws.rs.Path("AllCars")
 	@Produces(MediaType.APPLICATION_JSON)
 	public String Querycar() {
+		
+		byte[] result = null;
+		String outputString = "";
+		
 		
 		try {
 			Path walletPath = Paths.get("wallet");
@@ -96,12 +86,11 @@ public class QueryCar {
 				Network network = gateway.getNetwork("mychannel");
 				Contract contract = network.getContract("fabcar");
 
-				byte[] result;
+				
 
 				result = contract.evaluateTransaction("queryAllCars");
 				System.out.println(new String(result));
-				//contract.submitTransaction("createCar", "CAR11", "VW", "Polo", "P!ink", "Mary");
-				//result = contract.evaluateTransaction("queryCar", "CAR10");
+				outputString = new String(result);
 				
 			}
 				catch(Exception ex) 
@@ -114,7 +103,7 @@ public class QueryCar {
 				e.printStackTrace();
 			}
 			
-			return "Queried all Cars Successfully. Look at Open Liberty Terminal for more information";
+			return "Queried all Cars Successfully. \nCars are:\n " + outputString;
 		
 	}
 }
