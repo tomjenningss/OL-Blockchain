@@ -122,6 +122,27 @@ Cars:
 [{"Key":"CAR0","Record":{"make":"Toyota","model":"Prius","colour":"blue","owner":"Tomoko"}},{"Key":"CAR1","Record":{"make":"Ford","model":"Mustang","colour":"red","owner":"Brad"}},{"Key":"CAR10","Record":{"make":"VW","model":"Polo","colour":"Grey","owner":"Mary"}},{"Key":"CAR11","Record":{"make":"VW","model":"Polo","colour":"P!ink","owner":"Mary"}},{"Key":"CAR2","Record":{"make":"Hyundai","model":"Tucson","colour":"green","owner":"Jin Soo"}},{"Key":"CAR3","Record":{"make":"Volkswagen","model":"Passat","colour":"yellow","owner":"Max"}},{"Key":"CAR4","Record":{"make":"Tesla","model":"S","colour":"black","owner":"Adriana"}},{"Key":"CAR5","Record":{"make":"Peugeot","model":"205","colour":"purple","owner":"Michel"}},{"Key":"CAR6","Record":{"make":"Chery","model":"S22L","colour":"white","owner":"Aarav"}},{"Key":"CAR7","Record":{"make":"Fiat","model":"Punto","colour":"violet","owner":"Pari"}},{"Key":"CAR8","Record":{"make":"Tata","model":"Nano","colour":"indigo","owner":"Valeria"}},{"Key":"CAR9","Record":{"make":"Holden","model":"Barina","colour":"brown","owner":"Shotaro"}}]
 ```
 
+## Query specific Items on the Ledger:
+
+There is added functionality to Query specific cars on the ledger. Once all the cars are displayed on the ledger you can query by `CarByKeyID`.
+
+For example query `CAR5` and see the details of it:
+
+`http://localhost:9080/LibertyProject/System/QueryCar/CarByKeyID?Key=CAR5`
+
+```json
+
+Queried car Successfully. 
+Key = CAR5
+Details = {"make":"Peugeot","model":"205","colour":"purple","owner":"Michel"}
+
+```
+
+Query any car on the ledger by:
+
+`http://localhost:9080/LibertyProject/System/QueryCar/CarByKeyID?Key=<ID>`
+
+
 ## Add a car to the Ledger
 
 Open up a new terminal window
@@ -129,6 +150,8 @@ Open up a new terminal window
 Create a POST request to add to the ledger:
 
 `curl -X POST "http://localhost:9080/LibertyProject/System/AddCar?make=Volkswagon&model=Golf&colour=white&owner=Tom"`
+
+
 
 
 <img src="images/built-on-openliberty.png" alt="drawing" width="200" align="right"> 
