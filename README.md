@@ -1,5 +1,11 @@
 # Open Liberty Blockchain Client
 
+## Prerequisites:
+
+* Java
+* Git
+* Maven
+
 ## Description
 
 Experience using Open Liberty to commmunicate to a Blockchain Network. 
@@ -17,7 +23,7 @@ Where you can:
 
 The most difficult bit is setting up the Hyperledger Network. 
 
-## Set up the Network:
+## Set up the Network:
 
 `cd fabric-samples/` 
 
@@ -125,6 +131,6 @@ Create a POST request to add to the ledger:
 `curl -X POST "http://localhost:9080/LibertyProject/System/AddCar?make=Volkswagon&model=Golf&colour=white&owner=Tom"`
 
 
-<img src="images/built-on-openliberty.png" alt="drawing" width="200" align="right">
+<img src="images/built-on-openliberty.png" alt="drawing" width="200" align="right"> 
 <img src="images/hyperledger_image.png" alt="drawing" width="200" align="left">
 
