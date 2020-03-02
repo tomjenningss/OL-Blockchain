@@ -66,10 +66,7 @@ Open up a browser of your choice and hit the RESTful endpoint of `Hello world` w
 
 As we are using a pre loaded blockchain network cars are already on the network and you can view them by hitting the `QueryCar/AllCars` endpoint: `http://localhost:9080/LibertyProject/System/QueryCar/AllCars`
 
-Check the OL terminal with the returned cars and it will also display on the Web Browser:
-
-
-### Web Browser output
+Check the terminal that Open Liberty started and it will show the returned cars and it will also display on the Web Browser:
 
 ```json
 Queried all Cars Successfully.
@@ -79,9 +76,7 @@ Cars:
 
 ## 7. Query specific items on the ledger:
 
-There is added functionality to Query specific cars on the ledger. Once all the cars are displayed on the ledger you can query by `CarByKeyID`.
-
-For example query `CAR5` and see the details of it: `http://localhost:9080/LibertyProject/System/QueryCar/CarByKeyID?Key=CAR5`
+There is added functionality to Query specific cars on the ledger. Once all the cars are displayed on the ledger you can query by `CarByKeyID`. For example query `CAR5` and see the details of it: `http://localhost:9080/LibertyProject/System/QueryCar/CarByKeyID?Key=CAR5`
 
 ```json
 Queried car Successfully. 
@@ -89,16 +84,19 @@ Key = CAR5
 Details = {"make":"Peugeot","model":"205","colour":"purple","owner":"Michel"}
 ```
 
-Query any car on the ledger: `http://localhost:9080/LibertyProject/System/QueryCar/CarByKeyID?Key=<ID>`
+Query any car on the ledger by replacing the <ID> with an ID:
+  `http://localhost:9080/LibertyProject/System/QueryCar/CarByKeyID?Key=<ID>`
 
 
 ## 8. Add a car to the ledger:
 
-Open up a new terminal window
-
-Create a POST request to add to the ledger:
+Open up a new terminal window in VS Code by clicking the window button and it will split into two terminals and create a `POST` request to add to the ledger:
 
 `curl -X POST "http://localhost:9080/LibertyProject/System/AddCar?make=Volkswagon&model=Golf&colour=white&owner=Tom"`
+
+## Well Done
+
+Congratulations you have completed the task of using two IBM Products concurrently, as well as experiencing how easy it is to create a Blockchain Network and the concpets of Blockchain.
 
 <img src="images/built-on-openliberty.png" alt="drawing" width="200" align="right"> 
 <img src="images/hyperledger_image.png" alt="drawing" width="200" align="left">
