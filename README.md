@@ -1,4 +1,18 @@
-# Open Liberty Blockchain Client
+# Use Open Liberty and Develop a Blockchain Client
+
+The end goal is to have an application server called Open Liberty serving up transactions available in your blockchain smart contract, that you will create with the use of two Open source IBM Projects **IBM Blockchain Platform IBP** and **Open Liberty**.
+
+By the end of the tutorial you will be able to 
+
+* Start up a blockchain network 
+
+* Enrol users onto a Blockchain Network.
+
+* Add Cars to a Blockchain ledger.
+
+* Query all cars from a ledger.
+
+* Query specific cars from the ledger
 
 ## Prerequisites:
 
@@ -6,96 +20,53 @@
 * Git
 * Maven
 
-## Description
+### 1. Get the Dev Tools:
 
-Experience using Open Liberty to commmunicate to a Blockchain Network. 
+* [Open Liberty](https://marketplace.visualstudio.com/items?itemName=Open-Liberty.liberty-dev-vscode-ext) 
+* [Blockchain VS Code Extension](https://marketplace.visualstudio.com/items?itemName=IBMBlockchain.ibm-blockchain-platform)
 
-Where you can:
+## Configuration for IBP 
 
-* Enroll Users.
+A. Open up VS Code and install IBM Blockchain Platform VS Code extension (IBP) [Blockchain VS Code Extension](https://marketplace.visualstudio.com/items?itemName=IBMBlockchain.ibm-blockchain-platform) and ensure all the pre-reqs are set up. 
 
-* Add Cars to the ledger.
+_After installation, if you need any additional pre-reqs, the extension will guide you through installing them. Make sure you pick up the Docker pre-reqs, as they'll be used to create your Fabric network.  Make sure you pick up the Docker pre-reqs, as they'll be used to create your Fabric network_
 
-* Query all items from the ledger.
+B. Click the VS Code extension in the top right corner
 
-* Query specific items from the ledger
+C. Pick the FabCar sample from the Example code section
 
+D. Once it is cloned you can pick which ever language, choose Java as Open Liberty is a Java application server.
 
-The most difficult bit is setting up the Hyperledger Network. 
+## 2. Add a Fabric Environment and Setup network
 
-## Set up the Network:
+A. Go to the "IBM Blockchain Platform" view in VS Code by clicking the IBP icon
 
-`cd fabric-samples/` 
+B. Hover over the "Fabric Environments" section title and click the + icon
 
-Install the Hyperledger Fabric platform-specific binaries and config files for the version specified into the /bin and /config directories of fabric-samples
+C. Choose "Add a new local network (from template)"
 
-`curl -sSL https://bit.ly/2ysbOFE | bash -s`
+D. Choose the 1 Org template
 
-The command above downloads and executes a bash script that will download and extract all of the platform-specific binaries you will need to set up your network and place them into the cloned repo you created above. It retrieves the following platform-specific binaries:
+E. Wait for the network to spin up. 
 
-`configtxgen`,
-`configtxlator`,
-`cryptogen`,
-`discover`,
-`idemixgen`
-`orderer`,
-`peer`,
-`fabric-ca-client`
+* This will download the Docker images required for a local Fabric setup, and start the network
 
-and places them in the bin sub-directory of the current working directory.
+## 3. Deploy the FabCar Smart Contract
 
-Export the path you have just downloaded
+Click on `+Install` under Installed dropdown in the `Fabric Environments` console. Choose the `fabcar@1.0.0` contract. You should see a notification for successful install of the smart contract, and the smart contract listed under Installed in your `Fabric Environments` console. You are now ready to `instantiate` the smart contract.
 
-`export PATH=<path to download location>/bin:$PATH`
+Click on `+Instantiate` under Instantiated dropdown in the `Fabric Environments` console. Choose the channel: mychannel. Choose the `fabcar@1.0.0 contract`. 
 
-EG: `export /Users/thomas.jennings@ibm.com/Documents/blockchain-network-new/fabric-samples/bin:$PATH`
-
-## Bring up the test network
-
-`cd fabric-samples/test-network`
-
-Run the following command to remove any containers or artifacts from any previous runs:
-
-`./network.sh down`
-
-You can then bring up the network by issuing the following command. You will experience problems if you try to run the script from another directory:
-
-`./network.sh up`
-
-When running the network locally, it runs in Docker containers, so you can prove that it is up by running:
-
-`docker ps`
-
-## Create Channel
-
-Use the network.sh script to create a channel between Org1 and Org2 and join their peers to the channel. Run the following command to create a channel with the default name of mychannel:
-
-`./network.sh createChannel`
-
-## Deploy Chaincode
-
-After you have created a channel, you can start using smart contracts to interact with the channel ledger. Smart contracts contain the business logic that governs assets on the blockchain ledger.
-
-After you have used the network.sh to create a channel, you can start a chaincode on the channel using the following command:
-
-`./network.sh deployCC`
-
-If you have had any problems with building the network refer to:
-
-`https://github.com/hyperledger/fabric-samples/tree/master`
+In the Command pallete type in `initLedger` for the function. You can press `Enter` for optional arguments. Once this is successfully instantiated, you should see a successful notification in the output view, and the smart contract listed under `Instantiated` in your `Fabric Environments` console.
 
 
-# Now for the fun part
+## 4. Start interacting with the Blockchain Network from Open Liberty
 
-## Start interacting with the Blockchain Network
+### Load the Open Liberty project into VS Code
 
-Head to the `finish` directory in the `Blockchain-restful-service` directory:
+In the `Explorer` tab in the VS code extension load the Open Liberty Project.
 
-`cd ../../blockchain-restful-service/finish/`
-
-## Start up the Open Liberty Server:
-
-`mvn liberty:run`
+Start up the Open Liberty Server. Click on the `Liberty Dev Dashboard` and the project to start the Application server will be there. To start the server, right click the project, `start`. This will start the server in `Development Mode`, you can run tests on the server and also see the output. 
 
 ## Test that the server is running:
 
@@ -107,15 +78,16 @@ Hit the RESTful endpoint of `Hello world` which will return
 
 `http://localhost:9080/LibertyProject/System/helloworld`
 
-
 ## Query what is already on the ledger:
 
-The blockchain network has cars already on the network and you can view them by hitting the `QueryCar/AllCars` endpoint:
+As we are using a pre loaded blockchain network cars are already on the network and you can view them by hitting the `QueryCar/AllCars` endpoint:
 
 `http://localhost:9080/LibertyProject/System/QueryCar/AllCars`
 
-and you can check the OL terminal with the returned cars and it will also display on the webserver:
+and you can check the OL terminal with the returned cars and it will also display on the Web Browser:
 
+
+### Web Browser output
 ```json
 Queried all Cars Successfully.
 Cars:
