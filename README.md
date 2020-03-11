@@ -5,7 +5,6 @@
 * Java
 * Git
 * Maven
-
 ### Get the Dev Tools
 
 
