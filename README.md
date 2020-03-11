@@ -6,6 +6,9 @@
 * Git
 * Maven
 
+### Get the Dev Tools
+
+
 ## Description
 
 Experience using Open Liberty to commmunicate to a Blockchain Network. 
