@@ -36,61 +36,46 @@ public class AddCar {
 			@QueryParam("owner") String owner) 
 	{
 		
-		
-		
+
 		try {
 			
 		Path walletPath = Paths.get("wallet");
 		Wallet wallet = Wallet.createFileSystemWallet(walletPath);
 		
 		// load a CCP
-		Path networkConfigPath = Paths.get("first-network", "connection-org1.yaml");
+		Path networkConfigPath = Paths.get("1-Org-Local-Fabric-Org1_connection.json");
 		
 		Gateway.Builder builder = Gateway.createBuilder();
-		builder.identity(wallet, "user1").networkConfig(networkConfigPath).discovery(true);
+		builder.identity(wallet, "org1Admin").networkConfig(networkConfigPath).discovery(true);
 		
 		try (Gateway gateway = builder.connect()) {
 
 			// get the network and contract
 			Network network = gateway.getNetwork("mychannel");
 			Contract contract = network.getContract("fabcar");
-
-			//byte[] result;
 			
-			//result = contract.evaluateTransaction("queryAllCars");
-			//System.out.println(new String(result));
+			//String key = make + owner;
 			
-			String Key = make + owner;
+			//System.out.print("Make is " + make);
+			//System.out.print("Model is " + model);
+			//System.out.print("Colour is " + colour);
+			//System.out.print("Owner is " + owner);
 			
-			System.out.print("Make is " + make);
-			System.out.print("Model is " + model);
-			System.out.print("Colour is " + colour);
-			System.out.print("Owner is " + owner);
-			
-			System.out.println("Key = " + Key);
+			//System.out.println("Key = " + Key);
 			
 			if (make == null) {
 				make = "unknown";
 			}
-			
-			contract.submitTransaction("createCar", Key, make, model, colour, owner);
-
-			//result = contract.evaluateTransaction("queryCar", "CAR10000000");
-			//System.out.println(new String(result));
-
-			//contract.submitTransaction("changeCarOwner", "CAR10", "Archie");
-
-			//result = contract.evaluateTransaction("queryCar", "CAR10");
-			//System.out.println(new String(result));
+			contract.submitTransaction(make, model, colour, owner);
 			}
 		}
 		catch (Exception e){
 			e.printStackTrace();
 		}
 		
-		String parameters = "\nOwner = " + owner + "\nMake = " + make + "\nModel = " + model + "\nColour = " + colour;
-		String key = "\nTo Query recently added contents the Key is \n" + make + owner;
-		
-		return "Car added successfully. " + parameters + key;
+		//String parameters = "\nOwner = " + owner + "\nMake = " + make + "\nModel = " +   + "\nColour = " + colour;
+		//String key = "\nTo Query recently added contents the Key is: \n" + make + owner + "\n";
+		String parameters = owner + make + model + colour;
+		return parameters;
 	}	
 }
