@@ -27,7 +27,9 @@ Have a chance of spinning up a Blockchain Network implementing the `fabcar` samp
 
 Where you can:
 
-*  [Get the Dev Tools](## 1. Get the Dev Tools)
+[Custom foo description](#foo)
+
+*  [Get the Dev Tools](#1. Get the Dev Tools)
 
 * Add local fabric environment and start up Blockchain
 
@@ -55,7 +57,7 @@ Where you can:
 2. Go to the extensions Marketplace and search for "IBM Blockchain"
 3. Install the IBM Blockchain Platform extension
 4. After installation, if you need any additional pre-reqs, the extension will guide you through installing them. Make sure you pick up the Docker pre-reqs, as they'll be used to create your Fabric network
-
+# Foo
 ### Open Liberty Dev Tool
 
 1. Go to the extensions Marketplace on VS code and search for "Open Liberty Dev Dashboard"
