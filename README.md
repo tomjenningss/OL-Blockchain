@@ -26,7 +26,8 @@ Open Liberty is a Java application server. Put it simply, it hosts Java applicat
 Have a chance of spinning up a Blockchain Network implementing the `fabcar` sample where you can make transactions to the network
 
 Where you can:
-* Get the Dev Tools
+
+*  [Get the Dev Tools](## 1. Get the Dev Tools)
 
 * Add local fabric environment and start up Blockchain
 
@@ -46,9 +47,10 @@ Where you can:
 
 * Stop Blockchain
 
+
 ## 1. Get the Dev Tools
 
-### Blockchain Dev Tool
+### Blockchain Dev Tool
 1. If you dont already, Install Visual Studio Code. 
 2. Go to the extensions Marketplace and search for "IBM Blockchain"
 3. Install the IBM Blockchain Platform extension
