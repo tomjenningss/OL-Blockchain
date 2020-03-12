@@ -53,7 +53,7 @@ Open Liberty is a Java application server. Put it simply, it hosts Java applicat
 ## 1. Get the Dev Tools
 
 ### Blockchain Dev Tool
-1. If you dont already, Install Visual Studio Code. 
+1. If you dont already, [Install Visual Studio Code.](https://code.visualstudio.com/download) 
 2. Go to the extensions Marketplace and search for [IBM Blockchain](https://marketplace.visualstudio.com/items?itemName=IBMBlockchain.ibm-blockchain-platform)
 3. Install the IBM Blockchain Platform extension
 4. After installation, if you need any additional pre-reqs, the extension will guide you through installing them. Make sure you pick up the Docker pre-reqs, as they'll be used to create your Fabric network
