@@ -81,11 +81,11 @@ Open Liberty is a Java application server. Put it simply, it hosts Java applicat
 
 3. Click the clone button to git clone the sample code for the FabCar sample
 
-<img src="images/Fabcarsample-repo.png" alt="drawing" width="200">
+<img src="images/Fabcarsample-repo.png" alt="drawing" width="400">
 
 4. You can pick whichever language you prefer to open the smart contract in however, because Open Liberty is a Java application server choose Java
 
-<img src="images/openlocally.png" alt="drawing" width="200">
+<img src="images/openlocally.png" alt="drawing" width="400">
 
 This is a pre-configured smart contract already for you. Clone the Github repository for the `Java` `Fabcar` smart contract sample
 
@@ -114,7 +114,7 @@ As we installed the `Dev Tool` for Open Liberty click on the `Liberty Dev Dashbo
 
 Right click on `application-server` and hit `Start`. This will start the application server up very quickly. Usually within 2 - 5 seconds!
 
-<img src="images/start-server.png" alt="drawing" width="200">
+<img src="images/start-server.png" alt="drawing" width="400">
 
 The server has started in `Development mode` meaning it will show the command line and if you hit `enter` it will run tests onto the Server on demand.
 
