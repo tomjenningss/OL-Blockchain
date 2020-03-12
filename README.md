@@ -27,27 +27,33 @@ Have a chance of spinning up a Blockchain Network implementing the `fabcar` samp
 
 Where you can:
 
-[Custom foo description](#foo)
 
-*  [Get the Dev Tools](#1. Get the Dev Tools)
 
-* Add local fabric environment and start up Blockchain
+*  [Get the Dev Tools](#1.-Get-the-Dev-Tools)
 
-* Get the Fabcar sample smart contract
+* [Add local fabric environment and start up Blockchain](#2.-Add-local-fabric-environment-and-start-up-Blockchain)
 
-* Deploy the smart contract onto the network
+* [Get the Fabcar sample smart contract](#2.-Get-the-Fabcar-sample-smart-contract)
 
-* Export Profiles
+* [Deploy the smart contract onto the network](#3.-Get-the-Fabcar-sample-smart-contract)
 
-* Query all items from the ledger.
+* [Export Profiles](#5.Export-Profiles)
 
-* Query specific items from the ledger
+* [Start up Open Liberty server](#6.-Start-up-the-Open-Liberty-Server)
 
-* Add Cars to the ledger.
+* [Test that the server is running](#7.-Test-that-the-server-is-running-for-yourself:)
 
-* Stop Open Liberty
+* [Query all items from the ledger](#8.-Query-what-is-already-on-the-ledger:)
 
-* Stop Blockchain
+* [Query specific items from the ledger](#9.-Query-specific-car-on-the-ledger:)
+
+* [Add Cars to the ledger.](#10.-Add-a-car-to-the-ledger:)
+
+* [Stop the Open Liberty server](#11.-Stop-the-Open-Liberty-Server)
+
+* [Stop the Blockchain Network](#12.-Stop-and-tear-down-the-Blockchain-Network)
+
+* [Finished](#Finished)
 
 
 ## 1. Get the Dev Tools
@@ -57,7 +63,7 @@ Where you can:
 2. Go to the extensions Marketplace and search for "IBM Blockchain"
 3. Install the IBM Blockchain Platform extension
 4. After installation, if you need any additional pre-reqs, the extension will guide you through installing them. Make sure you pick up the Docker pre-reqs, as they'll be used to create your Fabric network
-# Foo
+
 ### Open Liberty Dev Tool
 
 1. Go to the extensions Marketplace on VS code and search for "Open Liberty Dev Dashboard"
