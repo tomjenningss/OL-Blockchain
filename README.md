@@ -12,14 +12,14 @@ You’ll be able to hit endpoints for different functions from the Open Liberty 
 * Docker
 * VS Code
 
-## What is “blockchain”?
+## What is “Blockchain”?
 Blockchain is a way of storing digital data. The data can literally be anything. For Bitcoin, it’s the transactions (logs of transfers of Bitcoin from one account to another), but it can even be files; it doesn’t matter. The data is stored in the form of blocks, which are linked (or chained) together using cryptographic hashes — hence the name “blockchain.”
 
 In our instance, we are using cars, and on our ledger we are going to make transactions to the ledger in the form of cars.
 
 ## What is "Open Liberty"?
 
-Open Liberty is a Java application server. Put it simply, it hosts Java applications which you can access on a webbrowser. This is lightweight, free and allows you to make your own Java applications that you want to put on the web.
+Open Liberty is a Java application server. Put it simply, it hosts Java applications which you can access on a web browser. This is lightweight, free and allows you to make your own Java applications that you want to put on the web. The benefit of Open Liberty is you can have as much or as little as you want in terms of additional features on your web server. In terms of popularity its predecessor WebSphere Application Server, 20,071 companies use it according to [enlyfit](https://enlyft.com/tech/products/ibm-websphere-application-server)
 
 ## Steps
 
