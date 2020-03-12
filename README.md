@@ -17,17 +17,11 @@ Blockchain is a way of storing digital data. The data can literally be anything.
 
 In our instance, we are using cars, and on our ledger we are going to make transactions to the ledger in the form of cars.
 
-## What is Open Liberty?
+## What is "Open Liberty"?
 
 Open Liberty is a Java application server. Put it simply, it hosts Java applications which you can access on a webbrowser. This is lightweight, free and allows you to make your own Java applications that you want to put on the web.
 
 ## Steps
-
-Have a chance of spinning up a Blockchain Network implementing the `fabcar` sample where you can make transactions to the network
-
-Where you can:
-
-
 
 *  [Get the Dev Tools](#1.-Get-the-Dev-Tools)
 
@@ -60,14 +54,14 @@ Where you can:
 
 ### Blockchain Dev Tool
 1. If you dont already, Install Visual Studio Code. 
-2. Go to the extensions Marketplace and search for "IBM Blockchain"
+2. Go to the extensions Marketplace and search for [IBM Blockchain](https://marketplace.visualstudio.com/items?itemName=IBMBlockchain.ibm-blockchain-platform)
 3. Install the IBM Blockchain Platform extension
 4. After installation, if you need any additional pre-reqs, the extension will guide you through installing them. Make sure you pick up the Docker pre-reqs, as they'll be used to create your Fabric network
 
 ### Open Liberty Dev Tool
 
 1. Go to the extensions Marketplace on VS code and search for "Open Liberty Dev Dashboard"
-2. Install the Open Liberty Dev Dashboard plugin
+2. Install the [Open Liberty Dev Dashboard plugin](https://marketplace.visualstudio.com/items?itemName=Open-Liberty.liberty-dev-vscode-ext)
 
 ## 2. Add local fabric environment and start up Blockchain
 
