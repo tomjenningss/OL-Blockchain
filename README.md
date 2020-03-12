@@ -75,17 +75,17 @@ Open Liberty is a Java application server. Put it simply, it hosts Java applicat
 
 1. Make your way back to the IBM Blockchain Platform homepage on VS Code. This can be done by clicking the IBP icon 
 
-<img src="images/blockchainlogo.png" alt="drawing" width="200" align="left">
+<img src="images/blockchainlogo.png" alt="drawing" width="200">
 
 2. Pick FabCar from the `explore sample code` section.
 
 3. Click the clone button to git clone the sample code for the FabCar sample
 
-<img src="images/Fabcarsample-repo.png" alt="drawing" width="200" align="left">
+<img src="images/Fabcarsample-repo.png" alt="drawing" width="200">
 
 4. You can pick whichever language you prefer to open the smart contract in however, because Open Liberty is a Java application server choose Java
 
-<img src="images/openlocally.png" alt="drawing" width="200" align="left">
+<img src="images/openlocally.png" alt="drawing" width="200">
 
 This is a pre-configured smart contract already for you. Clone the Github repository for the `Java` `Fabcar` smart contract sample
 
