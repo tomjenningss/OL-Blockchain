@@ -110,7 +110,7 @@ Export the `Fabric Wallets` by clicking on the `1 Org Local Fabric - Orderer Wal
 
 As we installed the `Dev Tool` for Open Liberty click on the `Liberty Dev Dashboard` icon and the extension will display the project. As the `artifact-Id` specified in the `pom.xml` where our server retrieves the dependincies for the server to run, it is called `application-server` 
 
-<img src="images/application-server.png" alt="drawing" width="200">
+<img src="images/application-server.png" alt="drawing" width="400">
 
 Right click on `application-server` and hit `Start`. This will start the application server up very quickly. Usually within 2 - 5 seconds!
 
