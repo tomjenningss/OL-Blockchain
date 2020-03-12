@@ -23,7 +23,7 @@ Open Liberty is a Java application server. Put it simply, it hosts Java applicat
 
 ## Steps
 
-*  [Get the Dev Tools](#1.-Get-the-Dev-Tools)
+* [Get the Dev Tools](#1.-Get-the-Dev-Tools)
 
 * [Add local fabric environment and start up Blockchain](#2.-Add-local-fabric-environment-and-start-up-Blockchain)
 
@@ -108,13 +108,13 @@ Export the `Fabric Wallets` by clicking on the `1 Org Local Fabric - Orderer Wal
 
 ## 6. Start up the Open Liberty Server
 
-Load the cloned project into VS Code. To do this click `file` `open` and choose the git cloned project. Once it is loaded in press on the `file` icon in the top left and the project should be there
+As we installed the `Dev Tool` for Open Liberty click on the `Liberty Dev Dashboard` icon and the extension will display the project. As the `artifact-Id` specified in the `pom.xml` where our server retrieves the dependincies for the server to run, it is called `application-server` 
 
-### Start the application server up
+<img src="images/application-server.png" alt="drawing" width="200">
 
-As we installed the `Dev Tool` for Open Liberty click on the `Liberty Dev Dashboard` icon and the extension will display the project. 
+Right click on `application-server` and hit `Start`. This will start the application server up very quickly. Usually within 2 - 5 seconds!
 
-Right click on the `Project` and hit `Start`. This will start the application server up very quickly. Usually within 2 - 5 seconds!
+<img src="images/start-server.png" alt="drawing" width="200">
 
 The server has started in `Development mode` meaning it will show the command line and if you hit `enter` it will run tests onto the Server on demand.
 
