@@ -19,7 +19,7 @@ In our instance, we are using cars, and on our ledger we are going to make trans
 
 ## What is "Open Liberty"?
 
-Open Liberty is a Java application server. Put it simply, it hosts Java applications which you can access on a web browser. This is lightweight, free and allows you to make your own Java applications that you want to put on the web. The benefit of Open Liberty is you can have as much or as little as you want in terms of additional features on your web server. In terms of popularity its predecessor WebSphere Application Server, 20,071 companies use it according to [enlyfit](https://enlyft.com/tech/products/ibm-websphere-application-server)
+Open Liberty is a Java application server. Put it simply, it hosts Java applications which you can access on a web browser. This is lightweight, free and allows you to make your own Java applications that you want to put on the web. The benefit of Open Liberty is you can have as much or as little as you want in terms of additional features on your web server. In terms of popularity its predecessor WebSphere Application Server, 20071 companies use it according to [enlyfit.](https://enlyft.com/tech/products/ibm-websphere-application-server)
 
 ## Steps
 
